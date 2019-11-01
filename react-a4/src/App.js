@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import {Route, Switch} from 'react-router-dom'; 
+
 
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import MainContainer from "./components/MainContainer";
+import ProjectsPanel from "./components/ProjectsPanel";
+import EmployeesPanel from "./components/EmployeesPanel";
+import TeamsPanel from "./components/TeamsPanel"; 
 
 
 class App extends Component {
@@ -15,124 +20,13 @@ class App extends Component {
               <h1 className="page-header">Overview</h1>
               <div className="row">
                 <div className="col-md-4">
-                  <div className="panel panel-default">
-                    <div className="panel-heading">
-                      <h3 className="panel-title">Projects</h3>
-                    </div>
-                    <div className="panel-body">
-                      <div className="table-responsive overview-table">
-                        <table className="table table-striped table-bordered">
-                          <tbody>
-                            <tr>
-                              <td>Project 1</td>
-                              <td>Active # Days</td>
-                            </tr>
-                            <tr>
-                              <td>Project 2</td>
-                              <td>Active # Days</td>
-                            </tr>
-                            <tr>
-                              <td>Project 3</td>
-                              <td>Active # Days</td>
-                            </tr>
-                            <tr>
-                              <td>Project 4</td>
-                              <td>Active # Days</td>
-                            </tr>
-                            <tr>
-                              <td>Project 5</td>
-                              <td>Active # Days</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <a
-                        href="/projects"
-                        className="btn btn-primary form-control"
-                      >
-                        View All Project Data
-                      </a>
-                    </div>
-                  </div>
+                  <ProjectsPanel/>
                 </div>
                 <div className="col-md-4">
-                  <div className="panel panel-default">
-                    <div className="panel-heading">
-                      <h3 className="panel-title">Teams</h3>
-                    </div>
-                    <div className="panel-body">
-                      <div className="table-responsive overview-table">
-                        <table className="table table-striped table-bordered">
-                          <tbody>
-                            <tr>
-                              <td>Team 1</td>
-                              <td># Employees</td>
-                            </tr>
-                            <tr>
-                              <td>Team 2</td>
-                              <td># Employees</td>
-                            </tr>
-                            <tr>
-                              <td>Team 3</td>
-                              <td># Employees</td>
-                            </tr>
-                            <tr>
-                              <td>Team 4</td>
-                              <td># Employees</td>
-                            </tr>
-                            <tr>
-                              <td>Team 5</td>
-                              <td># Employees</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <a href="/teams" className="btn btn-primary form-control">
-                        View All Team Data
-                      </a>
-                    </div>
-                  </div>
+                  <TeamsPanel/>
                 </div>
                 <div className="col-md-4">
-                  <div className="panel panel-default">
-                    <div className="panel-heading">
-                      <h3 className="panel-title">Employees</h3>
-                    </div>
-                    <div className="panel-body">
-                      <div className="table-responsive overview-table">
-                        <table className="table table-striped table-bordered">
-                          <tbody>
-                            <tr>
-                              <td>Employee 1</td>
-                              <td>Position</td>
-                            </tr>
-                            <tr>
-                              <td>Employee 2</td>
-                              <td>Position</td>
-                            </tr>
-                            <tr>
-                              <td>Employee 3</td>
-                              <td>Position</td>
-                            </tr>
-                            <tr>
-                              <td>Employee 4</td>
-                              <td>Position</td>
-                            </tr>
-                            <tr>
-                              <td>Employee 5</td>
-                              <td>Position</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <a
-                        href="/employees"
-                        className="btn btn-primary form-control"
-                      >
-                        View All Employee Data
-                      </a>
-                    </div>
-                  </div>
+                  <EmployeesPanel/>
                 </div>
               </div>
             </MainContainer>

@@ -6,7 +6,7 @@ const NavBar = (props) => {
       <div className="container-fluid">
         <div className="navbar-header">
           <a className="navbar-brand" href="/">
-            WEB422 - Project Portal
+            WEB422 - Project Portal STEVEN TRAN
           </a>
         </div>
       </div>
