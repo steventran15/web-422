@@ -1,5 +1,4 @@
 import React from 'react';
-
 import MainContainer from "./MainContainer";
 import ProjectsPanel from "./ProjectsPanel";
 import EmployeesPanel from "./EmployeesPanel";

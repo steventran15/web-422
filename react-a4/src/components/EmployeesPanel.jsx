@@ -26,33 +26,7 @@ class EmployeesPanel extends Component {
   // arrow function will prevent the usage of {this.handleClick.bind(this)}
   compare = (emp1, emp2) => {
     
-    
     return (parseInt(emp1.Extension) - parseInt(emp2.Extension));
-
-    // console.log("PROJECT 1: " + project1.ProjectName.substring(8).trim())     
-   
-    // if (isNaN(parseInt(project1.ProjectName.substring(8).trim())))
-    //   console.log('BRUHHHVV')
-    // else
-    //   console.log('YESSSS')
-  
-
-      
-    // console.log("PROJECT 2: " + project2.ProjectName.substring(8).trim())
-    
-
-    // if (parseInt(project1.ProjectName.substring(8).trim()) < parseInt(project2.ProjectName.substring(8).trim())) {
-    //   return -1;
-    // }
-    // if (parseInt(project1.ProjectName.substring(8).trim()) > parseInt(project2.ProjectName.substring(8).trim())) {
-    //   return 1;
-    // }    
-    // return 0;
-
-    //return parseInt(project1.ProjectName.substring(7).trim()) - parseInt(project2.ProjectName.substring(7).trim()); 
-    // if it returns a postive value after the calculation, project 1 will be before project 2, if negative value then it is vice versa. 
-
-
   }
 
   render() {
