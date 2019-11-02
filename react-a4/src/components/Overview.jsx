@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-import NavBar from "./NavBar";
-import SideBar from "./SideBar";
 import MainContainer from "./MainContainer";
 import ProjectsPanel from "./ProjectsPanel";
 import EmployeesPanel from "./EmployeesPanel";
 import TeamsPanel from "./TeamsPanel"; 
-//import Overview from "./components/Overview";
-
 
 const Overview = () => {
     return ( 
