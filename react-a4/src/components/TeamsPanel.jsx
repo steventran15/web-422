@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import moment from "moment";
 //import Moment from "react-moment";
+import {Link} from 'react-router-dom';
 
 class TeamsPanel extends Component {
   constructor(props) {
@@ -78,9 +79,9 @@ class TeamsPanel extends Component {
               </tbody>
             </table>
           </div>
-          <a href="/teams" className="btn btn-primary form-control">
+          <Link to="/teams" className="btn btn-primary form-control">
             View All Team Data
-          </a>
+          </Link>
         </div>
       </div>
     );

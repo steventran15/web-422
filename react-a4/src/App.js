@@ -1,3 +1,15 @@
+/********************************************************************************* 
+ * * WEB422 – Assignment 04 *
+ *  I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part of this 
+ * * assignment has been copied manually or electronically from any other source (including web sites) or * 
+ * * distributed to other students. *
+ * 
+ * 
+ * Name: Steven Tran Student ID: 105629174 Date: November 1st, 2019 
+ * 
+********************************************************************************/
+ 
+
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 

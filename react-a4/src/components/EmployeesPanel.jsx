@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import moment from "moment";
 //import Moment from "react-moment";
+import {Link} from 'react-router-dom';
 
 class EmployeesPanel extends Component {
   constructor(props) {
@@ -78,9 +79,9 @@ class EmployeesPanel extends Component {
               </tbody>
             </table>
           </div>
-          <a href="/employees" className="btn btn-primary form-control">
+          <Link to="/employees" className="btn btn-primary form-control">
             View All Employee Data
-          </a>
+          </Link>
         </div>
       </div>
     );
