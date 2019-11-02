@@ -41,7 +41,7 @@ class Projects extends Component {
         <div className="container-fluid">
           <div className="row">
             <MainContainer sidebar="Projects">
-              <h1 className="page-header">Projects</h1>
+              <h1 className="page-header"><b>Projects</b></h1>
               
             <table className="table table-striped table-bordered">
               <thead> 
