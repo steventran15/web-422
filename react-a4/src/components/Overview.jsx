@@ -16,7 +16,7 @@ const Overview = () => {
         <div className="container-fluid">
           <div className="row">
             <MainContainer sidebar="Overview">
-              <h1 className="page-header">Overview</h1>
+              <h1 className="page-header"><b>Overview</b></h1>
               <div className="row">
                 <div className="col-md-4">
                   <ProjectsPanel/>
