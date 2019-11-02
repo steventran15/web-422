@@ -31,7 +31,7 @@ class Projects extends Component {
 
 
     }
-
+ 
   render() {
 
     const {projects} = this.state;
@@ -42,15 +42,14 @@ class Projects extends Component {
           <div className="row">
             <MainContainer sidebar="Projects">
               <h1 className="page-header">Projects</h1>
-              <div className="row">
-              <div className="table-responsive overview-table">
+              
             <table className="table table-striped table-bordered">
-              <thead>
+              <thead> 
                   <tr>
-                      <td>Name</td>
-                      <td>Description</td>
-                      <td>Start Date</td>
-                      <td>End Date</td>
+                      <td><b>Name</b></td>
+                      <td><b>Description</b></td>
+                      <td><b>Start Date</b></td>
+                      <td><b>End Date</b></td> 
                   </tr>
               </thead>
               <tbody>
@@ -58,15 +57,13 @@ class Projects extends Component {
                   <tr key={singleProject._id} className={singleProject._id}>           
                     <td>{singleProject.ProjectName}</td>
                     <td>{singleProject.ProjectDescription}</td>
-                    <td>{moment().format(singleProject.ProjectStartDate, 'LL')}</td>
-                    <td>Active {moment().diff(singleProject.ProjectStartDate, 'days')} Days</td>  
+                    <td>{moment(singleProject.ProjectStartDate).format('LL')}</td>
+                    <td>{(singleProject.ProjectEndDate === null) ? 'n/a' : moment(singleProject.ProjectEndDate).format('LL')}</td>     
                   </tr>
                 ))}
               </tbody>
             </table>
-          </div>
-                
-              </div>
+          
             </MainContainer>
           </div>
         </div>
