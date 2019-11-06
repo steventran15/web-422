@@ -1,3 +1,16 @@
+/********************************************************************************* 
+ * 
+ * * WEB422 – Assignment 05 
+ * 
+ * * I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part of this 
+ * 
+ * * assignment has been copied manually or electronically from any other source (including web sites) or 
+ * 
+ * * distributed to other students. 
+ * *
+* Name: Steven Tran Student ID: 105629174 Date: Nov 6th, 2019 *
+********************************************************************************/
+
 import { Component } from '@angular/core';
 
 @Component({

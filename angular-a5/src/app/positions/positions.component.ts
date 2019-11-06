@@ -17,9 +17,10 @@ export class PositionsComponent implements OnInit {
 
   ngOnInit() {
 
-    this.posService.getPositions().subscribe((positions: Position[]) => { 
+    this.getPositionsSub = this.posService.getPositions().subscribe((positions: Position[]) => { 
       this.positions = positions;
-      this.getPositionsSub = this.posService;}, (error) => {
+      // this.getPositionsSub = this.posService;
+    }, (error) => {
         this.loadingError = true;
       });
     
@@ -29,7 +30,7 @@ export class PositionsComponent implements OnInit {
   ngOnDestroy() {
 
     if (this.getPositionsSub != undefined) {
-      this.getPositionsSub.getPositions.unsubscribe(); 
+      this.getPositionsSub.unsubscribe(); 
     }
 
   }

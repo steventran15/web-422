@@ -19,11 +19,12 @@ export class EmployeesComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log("this component is made");
+    //console.log("this component is made");
 
-    this.empService.getEmployees().subscribe((employees: Employee[]) => { 
+    this.getEmployeesSub = this.empService.getEmployees().subscribe((employees: Employee[]) => { 
       this.employees = employees;
-      this.getEmployeesSub = this.empService;}, (error) => {
+      // this.getEmployeesSub = this.empService;
+    }, (error) => {
         this.loadingError = true;
       });
 
@@ -35,7 +36,7 @@ export class EmployeesComponent implements OnInit {
   ngOnDestroy() {
     
     if (this.getEmployeesSub != undefined) {
-      this.getEmployeesSub.getEmployees.unsubscribe();  
+      this.getEmployeesSub.unsubscribe();  
     }
   
 
