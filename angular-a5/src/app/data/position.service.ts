@@ -10,12 +10,14 @@ import { Observable } from 'rxjs';
 
 export class PositionService {
 
+  getUrl: string = "https://weba1.herokuapp.com"; 
+
   constructor(private hc: HttpClient) { }
 
   getPositions(): Observable<Position[]> {
 
-    return this.hc.get<Position[]>("https://weba1.herokuapp.com/positions");
-
+    return this.hc.get<Position[]>(`${this.getUrl}/positions`); 
+  
 
   }
 

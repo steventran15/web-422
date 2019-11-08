@@ -10,11 +10,13 @@ import { Observable } from 'rxjs';
 
 export class EmployeeService {
 
+  getUrl: string = "https://weba1.herokuapp.com";
+
   constructor(private hc: HttpClient) { }
 
   getEmployees(): Observable<Employee[]> {
 
-    return this.hc.get<Employee[]>("https://weba1.herokuapp.com/employees");
+    return this.hc.get<Employee[]>(`${this.getUrl}/employees`);
   }
 }
 
