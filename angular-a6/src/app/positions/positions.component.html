@@ -1,0 +1,45 @@
+<div class="center"> 
+    <h2>Positions</h2> 
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non odio sed eros tristique bibendum.</p>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <!-- positions works! {{ positions | json }}           -->
+
+        <div *ngIf="loadingError;else pos_table" class="center">
+            <h1>ERROR LOADING POSITIONS</h1>
+          </div>
+
+        
+      <ng-template #pos_table>
+          <div class="table-responsive">
+            <table class="table table-condensed table-hover">
+              <thead>
+                <tr>
+                  <th>Position Title</th>
+                  <th>Position Description</th>
+                  <th>Salary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let pos of positions">
+                  <td>{{pos.PositionName}}</td>
+                  <td>{{pos.PositionDescription}}</td>
+                  <td>${{pos.PositionBaseSalary | number:'.2'}}</td>
+                  <!-- <td>{{emp.AddressStreet + ". " + emp.AddressState + ", " + emp.AddressCity + ". " + emp.AddressZip}}</td> -->
+                  <!-- <td>{{emp.HireDate | date:'longDate'}}</td> -->
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+         </ng-template>
+
+
+
+        
+    </div>
+  </div>
+</div>
