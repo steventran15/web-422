@@ -17,6 +17,7 @@ export class EmployeeComponent implements OnInit {
   employeeSubscription: any;
   getPositionsSubscription: any;
   saveEmployeeSubscription: any;
+  
   employee: EmployeeRaw;
   positions: Position[];
   successMessage: boolean = false;
@@ -27,18 +28,29 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit() {
     
-    let id = 0;
+    let id: string;
+    let posID: string;
 
     this.paramSubscription = this.route.params.subscribe(params => {
-      id = +params['id'];
+      id = params['id'];  
     }); 
 
     this.employeeSubscription = this.empService.getEmployee(id).subscribe(
-      (singleEmployee: EmployeeRaw[]) => {  this.employee = singleEmployee[0]; }  
+      (singleEmployee: EmployeeRaw[]) => {  this.employee = singleEmployee[0]; 
+        posID = this.employee.Position;
+        console.log(posID);   
+        //console.log(this.employee._id)
+      }  
+      
+      
     );
     
-    this.getPositionsSubscription = this.posService.getPosition(id).subscribe(
-      (pos: Position[]) => { this.positions = pos; }    
+    this.getPositionsSubscription = this.posService.getPosition(posID).subscribe(
+      (pos: Position[]) => { this.positions = pos;  
+      
+      //console.log(this.positions);
+      
+      }     
     );
   }
 
@@ -61,6 +73,22 @@ export class EmployeeComponent implements OnInit {
 
   ngOnDestroy() {
 
+    if (this.paramSubscription != undefined) {
+      this.paramSubscription.unsubscribe();  
+    }
+
+    if (this.employeeSubscription != undefined) {
+      this.employeeSubscription.unsubscribe();  
+    }
+
+    if (this.getPositionsSubscription != undefined) {
+      this.getPositionsSubscription.unsubscribe();  
+    }
+
+    if (this.saveEmployeeSubscription != undefined) {
+      this.saveEmployeeSubscription.unsubscribe();  
+    }
+   
   }
   
 

@@ -27,7 +27,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let emp of employees">
+            <tr *ngFor="let emp of employees" (click)="routeEmployee(emp._id)">
               <td>{{emp.FirstName + " " + emp.LastName}}</td>
               <td>{{emp.AddressStreet + ". " + emp.AddressState + ", " + emp.AddressCity + ". " + emp.AddressZip}}</td>
               <td>{{emp.PhoneNum + " ext: " + emp.Extension}}</td>

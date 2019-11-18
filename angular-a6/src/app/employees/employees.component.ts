@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../data/employee.service';
 import { Employee } from '../data/employee';
 //import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employees',
@@ -15,7 +16,7 @@ export class EmployeesComponent implements OnInit {
   getEmployeesSub: any;
   loadingError: boolean = false;
 
-  constructor(private empService: EmployeeService) { }
+  constructor(private empService: EmployeeService, private router: Router) { }
 
   ngOnInit() {
 
@@ -40,6 +41,11 @@ export class EmployeesComponent implements OnInit {
     }
   
 
+  }
+
+  routeEmployee(id: string) {
+    //console.log(id)
+    this.router.navigate([`/employee`, id]);   
   }
 
 }

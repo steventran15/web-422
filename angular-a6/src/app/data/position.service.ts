@@ -33,12 +33,11 @@ export class PositionService {
   }
 
 
-  getPosition(id): Observable<Position[]> {
+  getPosition(id: string): Observable<Position[]> {
 
     return this.hc.get<Position[]>(`${this.getUrl}/position/${id}`);
-
+    
   }
 
 }
-
- 
+        
