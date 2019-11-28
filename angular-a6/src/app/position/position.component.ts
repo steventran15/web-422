@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Position } from '../data/position';
 import { PositionService } from '../data/position.service';
 import { ActivatedRoute } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-position',
@@ -13,7 +14,7 @@ export class PositionComponent implements OnInit {
   paramSubscription: any;
   positionSubscription: any;
   savePositionSubscription: any;
-  position: Position;
+  position: Position = new Position();     
   successMessage: boolean = false;
   failMessage: boolean = false; 
 
@@ -36,7 +37,7 @@ export class PositionComponent implements OnInit {
   }
 
 
-  onSubmit() {
+  onSubmit(f: NgForm): void {
 
     this.savePositionSubscription = this.posService.savePosition(this.position).subscribe(
       (data: any) => {

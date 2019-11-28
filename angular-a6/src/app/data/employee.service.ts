@@ -9,7 +9,7 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' }) 
 };
 
-@Injectable({
+@Injectable({ 
   providedIn: 'root'
 })
 
@@ -34,9 +34,9 @@ export class EmployeeService {
  
 
 
-  getEmployee(id): Observable<EmployeeRaw[]> {
+  getEmployee(id: string): Observable<EmployeeRaw[]> { 
 
-    return this.hc.get<EmployeeRaw[]>(`${this.getUrl}/employee-raw/${id}`);  
+    return this.hc.get<EmployeeRaw[]>(`${this.getUrl}/employee-raw/${id}`);        
   }
  
 
