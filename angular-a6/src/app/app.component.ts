@@ -9,6 +9,8 @@
  * * distributed to other students. 
  * *
 * Name: Steven Tran Student ID: 105629174 Date: Nov 16th, 2019 *
+
+  Heroku:   https://angweb.herokuapp.com/
 ********************************************************************************/
 
 import { Component } from '@angular/core';
